@@ -1,0 +1,18 @@
+:css
+  *{margin:0; paddding:0;}
+  #welcome{text-align:center;font-size:20px;}
+  #login{text-align:center;}
+  
+#bg
+  #welcome WELCOME TO THE STUDENT'S LOGIN PAGE
+  %br/
+  #login
+    = form_for :student do |f|
+      = f.label "username"
+      = f.text_field(:username)
+      %br/
+      = f.label("password")
+      = f.password_field(:password)
+      %br/
+      %br/
+      = f.submit("Login")
